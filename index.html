@@ -1,11 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu de Hambúrguer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
+
 <body>
-    
+    <!-- Primeiro cabeçalho -->
+    <div class="top-header">
+        <div class="cep-input">
+            <i class="fas fa-truck"></i> Entregar no CEP: <input type="text" placeholder="Digite seu CEP">
+        </div>
+        <span class="divider">|</span>
+        <div class="auth-links">
+            <a href="#"><i class="fas fa-sign-in-alt"></i> Entrar</a> ou <a href="#"><i class="fas fa-user-plus"></i>
+                Criar conta</a>
+        </div>
+    </div>
+
+    <!-- Segundo  cabeçalho -->
+    <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+        <div class="menu-items">
+            <h1>Departamentos</h1>
+            <a href="#">Mercado</a>
+            <a href="#">Mercearia</a>
+            <a href="#">Padaria</a>
+            <a href="#">Peixaria</a>
+            <a href="#">Confeitaria</a>
+            <a href="#">Bomboniere</a>
+            <a href="#">Laticínios</a>
+            <a href="#">Cereais</a>
+        </div>
+    </div>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="img/logo.JPG" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <i class="fas fa-compass"></i>
+            <input type="text" placeholder="Pesquisar em toda loja...">
+        </div>
+        <div class="right-menu">
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+        </div>
+    </header>
+    <!-- Banner -->
+    <div class="banner">
+        <img src="img/banner-primario.jpg" alt="Banner">
+    </div>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
