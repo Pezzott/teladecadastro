@@ -1,242 +1,321 @@
-/* Toda a estilização que segue abaixo se refere unicamente a página principal do site */
+ /* Toda a estilização que segue abaixo se refere unicamente a página principal do site */
 
-/* Aqui inicia a estilização da página principal do site  */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ /* Aqui inicia a estilização da página principal do site  */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 
-body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    padding-top: 110px;
-    /* Adicionado para empurrar o conteúdo para baixo */
-}
-
-
-.menu-icon {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background-color: rgb(32, 52, 100);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Estilizar menu hamburguer*/
-
-.menu-icon i {
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.menu-icon img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.menu-items {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 30%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    z-index: 9998;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;
-    justify-content: center;
-    padding-top: 70px;
-    /* Adicionado padding-top para evitar sobreposição com o cabeçalho */
-}
-
-.menu-items h1 {
-    color: rgb(32, 52, 100);
-    font-size: 2rem;
-    margin-bottom: 20px;
-    /* Espaçamento adicional abaixo do título */
-}
-
-.menu-items a {
-    color: rgb(32, 52, 100);
-    font-size: 1.5rem;
-    text-decoration: none;
-    margin: 1rem 0;
-    text-align: center;
-    width: 100%;
-    padding: 0.5rem;
-    border-bottom: 1px solid #d1d1d1;
-}
-
-/* Estilização da barra de rolagem */
-
-.menu-items::-webkit-scrollbar {
-    width: 5px;
-    /* Largura da barra de rolagem */
-}
-
-.menu-items::-webkit-scrollbar-thumb {
-    background-color: rgb(32, 52, 100);
-    /* Cor da barra de rolagem */
-    border-radius: 5px;
-    /* Arredondamento dos cantos da barra de rolagem */
-}
-
-.menu-items::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    /* Cor de fundo da trilha da barra de rolagem */
-}
-
-.menu-items.show {
-    transform: translateX(0);
-}
-
-/* Código para o cabeçalho e menu à direita */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: rgb(32, 52, 100);
-    position: fixed;
-    top: 50px;
-    right: 0;
-    width: calc(100% - 60px);
-    z-index: 9997;
-}
-
-header .logo {
-    display: flex;
-    align-items: center;
-}
-
-header .logo img {
-    width: 115px;
-    margin-right: 20px;
-}
-
-header .search-bar {
-    flex: 1;
-    margin: 0 20px;
-    position: relative;
-}
-
-header .search-bar input {
-    width: 100%;
-    padding: 10px 10px 10px 40px;
-    border: none;
-    border-radius: 5px;
-}
-
-header .search-bar i {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #aaa;
-}
-
-header .right-menu {
-    display: flex;
-    align-items: center;
-}
+ body {
+     font-family: Arial, sans-serif;
+     font-size: 16px;
+     line-height: 1.5;
+     padding-top: 110px;
+     /* Adicionado para empurrar o conteúdo para baixo */
+ }
 
 
-header .right-menu i {
-    margin-right: 5px;
-}
+ .menu-icon {
+     position: fixed;
+     top: 50px;
+     left: 0;
+     width: 60px;
+     height: 60px;
+     background-color: rgb(32, 52, 100);
+     z-index: 9999;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
 
-/* Estilos para o novo cabeçalho */
-.top-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    /* Cinza claro */
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    z-index: 9996;
-}
+ /* Estilizar menu hamburguer*/
 
-.top-header .cep-input {
-    display: flex;
-    align-items: center;
-}
+ .menu-icon i {
+     color: #fff;
+     font-size: 1.5rem;
+     cursor: pointer;
+ }
 
-.top-header .cep-input i {
-    margin-right: 5px;
-    /* Espaçamento entre o ícone e o texto */
-}
+ .menu-icon img {
+     max-width: 100%;
+     max-height: 100%;
+ }
 
-.top-header .cep-input input {
-    padding: 5px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+ .menu-items {
+     position: fixed;
+     top: 100px;
+     left: 0;
+     width: 30%;
+     height: calc(100% - 100px);
+     background-color: rgb(255, 255, 255);
+     z-index: 9998;
+     transform: translateX(-100%);
+     transition: transform 0.3s ease-in-out;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     overflow-y: auto;
+     justify-content: center;
+     padding-top: 575px;
+     /* Adicionado padding-top para evitar sobreposição com o cabeçalho */
+ }
 
-.top-header .divider {
-    font-weight: bold;
-    color: rgb(32, 52, 100);
-    margin: 0 20px;
-}
 
-.top-header .auth-links a {
-    margin-left: 10px;
-    color: #333;
-    text-decoration: none;
-}
+ .menu-items h1 {
+     color: rgb(32, 52, 100);
+     font-size: 2rem;
+     margin-bottom: 20px;
+     /* Espaçamento adicional abaixo do título */
+ }
 
-.top-header i {
-    color: rgb(236, 103, 14);
-}
+ .menu-items a {
+     color: rgb(32, 52, 100);
+     font-size: 1rem;
+     text-decoration: none;
+     margin: 0.8rem 0;
+     text-align: center;
+     width: 100%;
+     padding: 0.5rem;
+     border-bottom: 1px solid #d1d1d1;
+ }
 
-.top-header .auth-links i {
-    margin-right: 5px;
-    /* Espaçamento entre o ícone e o texto */
-}
+ /* Estilização da barra de rolagem */
 
-.top-header .auth-links a:hover {
-    text-decoration: underline;
-}
+ .menu-items::-webkit-scrollbar {
+     width: 5px;
+     /* Largura da barra de rolagem */
+ }
 
-/* Estilo do carrinho de compras */
-header .cart-icon {
-    margin-left: 20px;
-    color: #fff;
-    text-decoration: none;
-}
+ .menu-items::-webkit-scrollbar-thumb {
+     background-color: rgb(32, 52, 100);
+     /* Cor da barra de rolagem */
+     border-radius: 5px;
+     /* Arredondamento dos cantos da barra de rolagem */
+ }
 
-header .cart-icon i {
-    margin-right: 5px;
-}
+ .menu-items::-webkit-scrollbar-track {
+     background-color: #f1f1f1;
+     /* Cor de fundo da trilha da barrra de rolagem */
+ }
 
-/* Estilizar Banner*/
+ .menu-items.show {
+     transform: translateX(0);
+ }
 
-.banner {
-    width: 100%;
-    overflow: hidden;
-    /* Isso garante que o conteúdo não exceda o tamanho do container */
-}
+ /* Código para o cabeçalho e menu à direita */
+ header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px 20px;
+     background-color: rgb(32, 52, 100);
+     position: fixed;
+     top: 50px;
+     right: 0;
+     width: calc(100% - 60px);
+     z-index: 9997;
+ }
 
-.banner img {
-    width: 100%;
-    display: block;
-    /* Isso remove qualquer espaço em branco abaixo da imagem */
-}
+ header .logo {
+     display: flex;
+     align-items: center;
+ }
 
-/* Aqui finaliza a estilização da página principal do site  */
+ header .logo img {
+     width: 115px;
+     margin-right: 20px;
+ }
+
+ header .search-bar {
+     flex: 1;
+     margin: 0 20px;
+     position: relative;
+ }
+
+ header .search-bar input {
+     width: 100%;
+     padding: 10px 10px 10px 40px;
+     border: none;
+     border-radius: 5px;
+ }
+
+ header .search-bar i {
+     position: absolute;
+     left: 10px;
+     top: 50%;
+     transform: translateY(-50%);
+     color: #aaa;
+ }
+
+ header .right-menu {
+     display: flex;
+     align-items: center;
+ }
+
+
+ header .right-menu i {
+     margin-right: 5px;
+ }
+
+ /* Estilos para o novo cabeçalho */
+ .top-header {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     padding: 10px 20px;
+     background-color: #ffffff;
+     /* Cinza claro */
+     position: fixed;
+     top: 0;
+     right: 0;
+     width: 100%;
+     z-index: 9996;
+ }
+
+ .top-header .cep-input {
+     display: flex;
+     align-items: center;
+ }
+
+ .top-header .cep-input i {
+     margin-right: 5px;
+     /* Espaçamento entre o ícone e o texto */
+ }
+
+ .top-header .cep-input input {
+     padding: 5px;
+     margin-right: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+ }
+
+ .top-header .divider {
+     font-weight: bold;
+     color: rgb(32, 52, 100);
+     margin: 0 20px;
+ }
+
+ .top-header .auth-links a {
+     margin-left: 10px;
+     color: #333;
+     text-decoration: none;
+ }
+
+ .top-header i {
+     color: rgb(236, 103, 14);
+ }
+
+ .top-header .auth-links i {
+     margin-right: 5px;
+     /* Espaçamento entre o ícone e o texto */
+ }
+
+ .top-header .auth-links a:hover {
+     text-decoration: underline;
+ }
+
+ /* Estilo do carrinho de compras */
+ header .cart-icon {
+     margin-left: 20px;
+     color: #fff;
+     text-decoration: none;
+ }
+
+ header .cart-icon i {
+     margin-right: 5px;
+ }
+
+ /* Estilizar Banner*/
+
+ .banner {
+     width: 100%;
+     overflow: hidden;
+     /* Isso garante que o conteúdo não exceda o tamanho do container */
+ }
+
+ .banner img {
+     width: 100%;
+     display: block;
+     /* Isso remove qualquer espaço em branco abaixo da imagem */
+ }
+
+ /* Estilização do Bloco de Imagens */
+ .image-block {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 10px;
+     padding: 0 5%;
+     border-bottom: 1px solid blue;
+ }
+
+ .image-block a {
+     width: 20%;
+     text-align: center;
+     margin-bottom: 20px;
+ }
+
+ .image-block a img {
+     width: 90%;
+     margin: 0 auto;
+     transition: transform 0.3s;
+     padding-top: 10px;
+ }
+
+ .image-block a img:hover {
+     transform: scale(1.05);
+ }
+
+ /* Estilo para as imagens e informações de produtos */
+ .product-images {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     margin: 0 5%;
+     width: 90%;
+ }
+
+ .product-images figure {
+     width: 23%;
+     margin-bottom: 30px;
+     text-align: center;
+ }
+
+ .product-images img {
+     width: 100%;
+ }
+
+ .product-images figcaption {
+     margin-top: 10px;
+     color: rgb(32, 52, 100);
+ }
+
+ .product-images h4 {
+     font-weight: bold;
+     margin-bottom: 5px;
+ }
+
+ .product-images p {
+     margin-top: 5px;
+ }
+
+ .product-images button {
+     background-color: white;
+     color: rgb(236, 103, 14);
+     border: 2px solid rgb(236, 103, 14);
+     border-radius: 5px;
+     margin-top: 10px;
+     padding: 5px 10px;
+     cursor: pointer;
+     transition: background-color 0.3s, color 0.3s;
+ }
+
+ .product-images button:hover {
+     background-color: rgb(236, 103, 14);
+     color: white;
+ }
+
+
+ /* Aqui finaliza a estilização da página principal do site  */
