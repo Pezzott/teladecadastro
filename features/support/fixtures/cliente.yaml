@@ -1,0 +1,40 @@
+0001:
+  nome: "Adenilton"
+  sobrenome: "Pezzott"
+  cpf: 31107281091
+  datanasc: "24/05/1990"
+  sexo: masculino
+  contato: 1195875623
+  tipoendereço: casa
+  endereço: "Rua das Orquídeas"
+  numero: 230
+  Ap:
+  cep: 32254635
+  mesmoendereço: s
+  endereço de entrega:
+  cepentrega:
+  email: "adenilton-pezzott@gmail.com"
+  senha: "Pezzott@adnilton1"
+  confsenha: "Pezzott@adnilton1"
+  receberpromo: n
+  termo: s
+0001:
+  nome: "Ivone"
+  sobrenome: "Alcantara"
+  cpf: 56200575002
+  datanasc: "09/03/1976"
+  sexo: feminino
+  contato: 11982809752
+  tipoendereço: apartamento
+  endereço: "Rua Erva Imperial"
+  numero: 49
+  Ap: "Bloco 3-46"
+  cep: 3244030
+  mesmoendereço: s
+  endereço de entrega:
+  cepentrega:
+  email: "ivone.alcantara09@gmail.com"
+  senha: "Ivone!76"
+  confsenha: "Ivone!76"
+  receberpromo: n
+  termo: s
