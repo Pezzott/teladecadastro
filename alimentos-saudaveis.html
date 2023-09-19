@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperMercado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS do Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body> <!-- Primeiro cabeçalho -->
+    <div class="top-header">
+        <div class="cep-input"> <i class="fas fa-truck"></i> Entregar no CEP: <input type="text"
+                placeholder="Digite seu CEP"> </div> <span class="divider">|</span>
+        <div class="auth-links"> <a href="#"><i class="fas fa-sign-in-alt"></i> Entrar</a> ou <a href="#"><i
+                    class="fas fa-user-plus"></i> Criar conta</a> </div>
+    </div>
+    <!-- Segundo  cabeçalho -->
+    <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+        <div class="menu-items">
+            <h1>Departamentos</h1>
+            <a href="alimentos-saudaveis.html">Alimentos Saudáveis</a>
+            <a href="#">Artigos de Festa</a>
+            <a href="#">Autos e Ferramentas</a>
+            <a href="#">Bazar</a>
+            <a href="#">Bebidas Não Alcoólicas</a>
+            <a href="#">Bebidas Alcoólicas</a>
+            <a href="#">Carnes e Aves</a>
+            <a href="#">Churrasco</a>
+            <a href="#">Frios</a>
+            <a href="#">Higiene e Beleza</a>
+            <a href="#">Jardinagem</a>
+            <a href="#">Leites</a>
+            <a href="#">Limpeza</a>
+            <a href="#">Padaria</a>
+            <a href="#">Pescados</a> <a href="#">Pet Shop</a>
+        </div>
+    </div> <!-- Cabeçalho -->
+    <header>
+        <div class="logo"> <a href="index.html"><img src="img/logo.JPG" alt="Logo"></a></div>
+        <div class="search-bar"> <i class="fas fa-compass"></i> <input type="text"
+                placeholder="Pesquisar em toda loja..."> </div>
+        <div class="right-menu"> <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> Carrinho</a> </div>
+    </header> <br>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 10px 2%;">
+        <h1 style="color: rgb(75,87,102); text-align: left;">Alimentos Saudáveis</h1>
+        <div>
+            <span>Ordenar por:</span>
+            <select id="sortOption">
+                <option value="productName">Nome do Produto</option>
+                <option value="price">Preço</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Imagens de produtos 1 -->
+    <div class="product-images">
+        <figure> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/5/159409.jpg"
+                alt="Produto 1">
+            <figcaption>
+                <h4>Splenda</h4>
+                <p>Adoçante Liquido Splenda 100% Stevia Frasco 50ml</p>
+                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 21,59</p> <button
+                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/5/159407.jpg"
+                alt="Produto 2">
+            <figcaption>
+                <h4>Splenda</h4>
+                <p>Adoçante Líquido Splenda Sucralose Frasco 65ml
+                </p>
+                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 12,58</p>
+                <button
+                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/6/6/66112.jpg"
+                alt="Produto 3">
+            <figcaption>
+                <h4>Olvebra</h4>
+                <p>Alimento de Soja Olvebra Soymilke Sabor Doce de Leite Sem Lactose lata 340g</p>
+                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 23,98</p>
+                <button
+                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/5/159408.jpg"
+                alt="Produto 4">
+            <figcaption>
+                <h4>Splenda</h4>
+                <p>Adoçante em Pó Splenda Stevia Caixa C/50 40g</p>
+                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 15,98</p>
+                <button
+                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!-- JavaScript do Bootstrap e dependências -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
