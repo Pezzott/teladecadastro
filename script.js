@@ -47,3 +47,8 @@ document.getElementById('sortOption').addEventListener('change', function () {
     const container = document.querySelector('.product-images'); // Selecionando o container dos produtos
     sortedProducts.forEach(product => container.appendChild(product));
 });
+
+
+// Compo de busca 2ª Cabeçalho
+
+  

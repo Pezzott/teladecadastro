@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- CSS do Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -58,11 +59,15 @@
     </div> <!-- Cabeçalho -->
     <header>
         <div class="logo"> <a href="index.html"><img src="img/logo.JPG" alt="Logo"></a></div>
-        <div class="search-bar"> <i class="fas fa-compass"></i> <input type="text"
-                placeholder="Pesquisar em toda loja..."> </div>
+        <div class="container">
+            <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar em todo site...">
+            <div id="results" class="mt-2"></div>
+        </div>
         <div class="right-menu"> <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> Carrinho</a> </div>
-    </header> <!-- Banner -->
+    </header>
+    <!-- Banner -->
     <div class="banner"> <img src="img/banner-primario.jpg" alt="Banner"> </div>
+
     <!--Carrousel feito com Boostrap-->
     <div class="container-fluid mt-5">
         <div id="imageCarousel" class="carousel slide" data-ride="carousel">
@@ -102,238 +107,241 @@
     <!-- Bloco de Imagens -->
     <div class="image-block">
         <a href="#">
-            <img src="img/imagem-pagina-açougue.JPG" alt="Imagem 1">
-            <h4>Produtos de Açougue</h4>
+            <img src="https://tauste.com.br/media/wysiwyg/Grupo_337_1.png" alt="Produtos de Açougue">
+            <h4></h4>
         </a>
         <a href="#">
-            <img src="img/imagem-pagina-frios.JPG" alt="Imagem 2">
-            <h4>Produtos de Frios</h4>
+            <img src="	https://tauste.com.br/media/wysiwyg/frios_1.png" alt="Produtos de Frios">
+            <h4></h4>
         </a>
         <a href="#">
-            <img src="img/imagem-pagina-hortifruti.JPG" alt="Imagem 3">
-            <h4>Produtos de Hortifruti</h4>
+            <img src="	https://tauste.com.br/media/wysiwyg/Grupo_359.png" alt="Produtos de Hortifruti">
+            <h4></h4>
         </a>
         <a href="#">
-            <img src="img/imagem-pagina-padaria.JPG" alt="Imagem 4">
-            <h4>Produtos de Padaria</h4>
+            <img src="https://tauste.com.br/media/wysiwyg/5-layers_2.png" alt="Produtos de Padaria">
+            <h4></h4>
         </a>
         <a href="#">
-            <img src="img/imagem-pagina-peixaria.JPG" alt="Imagem 5">
-            <h4>Produtos de Peixaria</h4>
+            <img src="img/imagem-pagina-peixaria.JPG" alt="Produtos de Peixaria">
+            <h4></h4>
         </a>
     </div>
     <!-- Título "Produtos Sugeridos" -->
     <h2 style="color: rgb(236,103,14); text-align: left; margin: 20px 5%;">Produtos Sugeridos</h2>
 
     <!-- Imagens de produtos 1 -->
-    <div class="product-images">
-        <figure> <img
+    <div class="products">
+        <div class="product" id="produto1"> <img
                 src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/5/154967_4.jpg"
-                alt="Produto 1">
-            <figcaption>
-                <h4>Colomba</h4>
-                <p>Colomba Recheada Tauste.
-                    Chocolate Unidade 700g</p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 27,98</p> <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/6/161035.jpg"
-                alt="Produto 2">
-            <figcaption>
-                <h4>Salada de Frutas</h4>
-                <p>Salada de Frutas Individual Mix 420g
-                </p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 12,58</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/4/5/45980_8.jpg"
-                alt="Produto 3">
-            <figcaption>
-                <h4>Bolo</h4>
-                <p>Bolo Confeitado Nega Maluca Clássico 1150g</p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 47,03</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/6/4/64535_3.jpg"
-                alt="Produto 4">
-            <figcaption>
-                <h4>Maionese</h4>
-                <p>Maionese com Legumes 400g</p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 11,56</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
+                alt="Colomba">
+            <p>Colomba Recheada Tauste. Chocolate Unidade 700g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 27,98</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto2"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/6/161035.jpg"
+                alt="Salada de Frutas">
+            <p>Salada de Frutas Individual Mix 420g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 12,58</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto3"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/4/5/45980_8.jpg"
+                alt="Bolo">
+            <p>Bolo Confeitado Nega Maluca Clássico 1150g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 47,03</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto4"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/6/4/64535_3.jpg"
+                alt="Maionese">
+            <p>Maionese com Legumes 400g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 11,56</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
     </div>
 
     <!-- Imagens de produtos 2 -->
-    <div class="product-images">
-        <figure> <img
+    <div class="products">
+        <div class="product" id="produto5"> <img
                 src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/9/19947_7.jpg"
-                alt="Produto 1">
-            <figcaption>
-                <h4>Pão de Forma</h4>
-                <p>Pão de Forma Mineiro,
-                    Unidade 500g
-                </p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 7,98</p> <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/1/117105_7.jpg"
-                alt="Produto 2">
-            <figcaption>
-                <h4>Sushi</h4>
-                <p> Sushi Temaki Salmão com Cream Cheese Unidade 100g
-                </p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 15,98</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="	https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/2/0/20047_6.jpg"
-                alt="Produto 3">
-            <figcaption>
-                <h4>Picanha</h4>
-                <p>Picanha Peça 1400g</p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 89,57</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/1/119053_26.jpg"
-                alt="Produto 4">
-            <figcaption>
-                <h4>Hambúrguer</h4>
-                <p>Hambúrguer Gourmet Congelado 320g</p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 12,75</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
+                alt="Pão de Forma">
+            <p>Pão de Forma Mineiro, Unidade 500g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 7,98</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto6"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/1/117105_7.jpg"
+                alt="Sushi">
+            <p>Sushi Temaki Salmão com Cream Cheese Unidade 100g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 15,98</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto7"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/2/0/20047_6.jpg"
+                alt="Picanha">
+            <p>Picanha Peça 1400g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 89,57</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto8"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/1/119053_26.jpg"
+                alt="Hambúrguer">
+            <p>Hambúrguer Gourmet Congelado 320g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 12,75</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
     </div>
 
     <!-- Imagens de produtos 3 -->
-    <div class="product-images">
-        <figure> <img
+    <div class="products">
+        <div class="product" id="produto9"> <img
                 src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/6/8/68062_6.jpg"
-                alt="Produto 1">
-            <figcaption>
-                <h4>Pão Caseiro</h4>
-                <p>Pão Caseirinho Doce 
-                    Unidade 240g
-                </p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 5,98</p> <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/1/115045_6.jpg"
-                alt="Produto 2">
-            <figcaption>
-                <h4>Tilápia</h4>
-                <p> Cortes de Tilápia Premium sem Espinhas 500g
-                </p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 29,95</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/0/102858_36.jpg"
-                alt="Produto 3">
-            <figcaption>
-                <h4>Filé de Frango</h4>
-                <p>Filé de Frango Temperado 500g</p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 12,49</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/3/9/39214_31.jpg"
-                alt="Produto 4">
-            <figcaption>
-                <h4>Kibe</h4>
-                <p>Kibe  800g</p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 20,71</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
+                alt="Pão Caseiro">
+            <p>Pão Caseirinho Doce Unidade 240g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 5,98</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto10"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/1/115045_6.jpg"
+                alt="Tilápia">
+            <p>Cortes de Tilápia Premium sem Espinhas 500g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 29,95</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto11"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/0/102858_36.jpg"
+                alt="Filé de Frango">
+            <p>Filé de Frango Temperado 500g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 12,49</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto12"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/3/9/39214_31.jpg"
+                alt="Kibe">
+            <p>Kibe 800g</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 20,71</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
     </div>
 
     <!-- Imagens de produtos 4 -->
-    <div class="product-images">
-        <figure> <img
+    <div class="products">
+        <div class="product" id="produto13"> <img
                 src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/0/107484_5.jpg"
-                alt="Produto 1">
-            <figcaption>
-                <h4>Cartuxa</h4>
-                <p>Vinho Cartuxa Ea Seco Portugal Tinto Garrafa 750ml
-                    
-                </p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 69,90</p> <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
-        <figure>
-            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/2/120472_4.jpg"
-                alt="Produto 2">
-            <figcaption>
-                <h4>Don Luciano</h4>
-                <p> Vinho Don Luciano Tempranillo Seco Espanha Tinto Garrafa 750ml
-                </p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 34,80</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
+                alt="Cartuxa">
+            <p>Vinho Cartuxa Ea Seco Portugal Tinto Garrafa 750ml</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 69,90</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto14"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/2/120472_4.jpg"
+                alt="Don Luciano">
+            <p>Vinho Don Luciano Tempranillo Espanha 750ml</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 34,80</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto15"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/5/4/54117_6.jpg"
+                alt="Santa Carolina">
+            <p>Vinho Santa Carolina Cabernet Sauvignon 750ml</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 24,90</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+        <div class="product" id="produto16"> <img
+                src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/5/150350_3.jpg"
+                alt="Ceremony">
+            <p>Vinho Ceremony Porto Ruby Tinto Portugal Garrafa 750ml</p>
+            <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 99,90</p> <button
+                style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
+        </div>
+    </div><br>
+    <h1 style="color: rgb(236,103,14); font-weight: 700; font-size: 36px; line-height: 42px; text-align: center;">Compre
+        das melhores marcas</h1>
 
-        <figure>
-            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/5/4/54117_6.jpg"
-                alt="Produto 3">
-            <figcaption>
-                <h4>Santa Carolina</h4>
-                <p>Vinho Santa Carolina Reservado Cabernet Sauvignon Seco Chile Tinto Garrafa 750ml</p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 24,90</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
+    <!--Carrousel Compre Das Melhores Marcas com Boostrap-->
+    <div class="container-fluid mt-5">
+        <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicadores -->
+            <ul class="carousel-indicators">
+                <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#imageCarousel" data-slide-to="1"></li>
+                <li data-target="#imageCarousel" data-slide-to="2"></li>
+            </ul>
 
-        <figure>
-            <img src="https://tauste.com.br/media/catalog/product/cache/e204a6eb1d03fd64574e06137b7fee82/1/5/150350_3.jpg"
-                alt="Produto 4">
-            <figcaption>
-                <h4>Ceremony</h4>
-                <p>Vinho Ceremony Porto Ruby Tinto Portugal Garrafa 750ml</p>
-                <p style="font-weight: bold; margin-top: 10px; color: rgb(236,103,14);">R$ 99,90</p>
-                <button
-                    style="background-color: white; color: rgb(236,103,14); border: 2px solid rgb(236,103,14); border-radius: 5px;">Adicionar</button>
-            </figcaption>
-        </figure>
-    </div>
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#"><img src="img/Carrousel-melhores-marcas1.JPG" alt="Imagem 1" class="d-block w-100"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#"><img src="img/Carrousel-melhores-marcas2.JPG" alt="Imagem 2" class="d-block w-100"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#"><img src="img/Carrousel-melhores-marcas3.JPG" alt="Imagem 3" class="d-block w-100"></a>
+                </div>
+            </div>
 
+            <!-- Controles esquerdo e direito -->
+            <a class="carousel-control-prev" href="#imageCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#imageCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div><br>
+    <!--Banner de roda pé-->
+    <div class="banner"> <a href="#"><img
+                src="https://tauste.com.br/media/wysiwyg/ganhadores-Banner-Delivery---home-inicial-1920x200px_3.jpg"
+                alt="Banner"></a></div><br>
 
-
+    <!--rodapé-->
+    <footer style="background-color: rgb(239,239,239); color: rgb(75,87,102); padding: 20px;">
+        <div class="footer-logo"> <img src="https://tauste.com.br/media/wysiwyg/25-layers.png"
+                alt="Logo do Supermercado Tauste"> </div>
+        <div class="footer-column">
+            <h5><span style="font-size: 24px;">Institucional</span></h5>
+            <ul>
+                <li><a href="#">A Empresa</a></li>
+                <li><a href="#">Ações Sociais</a></li>
+                <li><a href="#">Clube Tauste</a></li>
+                <li><a href="#">Nossas Lojas</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tauste Pay</a></li>
+                <li><a href="#">Trabalhe Conosco</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h5><span style="font-size: 24px;">Ajuda</span></h5>
+            <ul>
+                <li><a href="#">Dúvidas Frequentes</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+                <li><a href="#">Listas de Compras</a></li>
+                <li><a href="#">Nossas Políticas</a></li>
+                <li><a href="#">Trocas e Devoluções</a></li>
+                <li><a href="#">Política e Privacidade</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h5><span style="font-size: 24px;">Atendimento</span></h5>
+            <p>Todos os dias das 8:00 às 22 horas</p>
+            <p>Acompanhe nossas redes sociais:</p>
+            <div class="social-icons"> <a href="#"><i class="bi bi-facebook"></i></a> <a href="#"><i
+                        class="bi bi-instagram"></i></a> <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i
+                        class="bi bi-youtube"></i></a> </div>
+        </div>
+        <div class="footer-column">
+            <h5><span style="font-size: 24px;">Pagamento na entrega</span></h5>
+            <ul>
+                <li><strong>Formas de pagamento:</strong></li>
+            </ul>
+            <div class="payment-icons"> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-visa"></i> <i
+                    class="fab fa-cc-amex"></i> <i class="fab fa-cc-discover"></i> <i class="fab fa-cc-diners-club"></i>
+            </div>
+        </div>
+    </footer>
     <!-- JavaScript do Bootstrap e dependências -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
